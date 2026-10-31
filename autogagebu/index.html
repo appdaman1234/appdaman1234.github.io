@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="자동가계부의 금융 알림 처리, 기기 내 보관과 백업, 광고 및 삭제 방법을 안내합니다.">
+  <meta name="theme-color" content="#245f68">
+  <title>자동가계부 개인정보처리방침 · AppDaMan</title>
+  <style>
+    :root{color-scheme:light;font-family:system-ui,-apple-system,"Malgun Gothic",sans-serif;color:#182b30;background:#f4f7f6;font-size:16px}
+    *{box-sizing:border-box}body{margin:0}main{max-width:800px;margin:0 auto;padding:48px 24px 40px}
+    .brand{font-size:15px;font-weight:750;letter-spacing:.04em;color:#245f68;margin-bottom:28px}
+    h1{font-size:clamp(27px,5vw,36px);line-height:1.35;letter-spacing:-.04em;margin:0 0 12px}
+    .date{color:#5c7075;font-size:14px;margin:0 0 26px}article{padding:28px 30px;background:#fff;border:1px solid #dce5e3;border-radius:18px}
+    section+section{margin-top:30px;padding-top:26px;border-top:1px solid #e8eeec}h2{font-size:19px;line-height:1.5;margin:0 0 12px;letter-spacing:-.025em}
+    p{font-size:15px;line-height:1.9;margin:10px 0;overflow-wrap:anywhere}strong{font-weight:700}a{color:#1e626c;text-underline-offset:3px}a:focus-visible{outline:3px solid #245f68;outline-offset:4px}
+    footer{padding:22px 0;color:#5c7075;font-size:12px;line-height:1.8}footer a{color:inherit}nav{margin-top:16px;display:flex;gap:18px;flex-wrap:wrap}
+    @media(max-width:480px){main{padding:30px 18px}article{padding:22px 20px}.brand{margin-bottom:22px}}
+    @media print{body{background:#fff}main{padding:0}article{border:0;padding:0}h2{break-after:avoid}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="brand">AppDaMan · 자동가계부</div>
+    <h1>개인정보처리방침</h1>
+    <p class="date">시행일 2026년 10월 31일 · 앱 버전 0.1.18 기준<br>앱 식별자: com.appdaman.moneydiary</p>
+  </header>
+  <article>
+    <section aria-labelledby="purpose">
+      <h2 id="purpose">1. 이용하는 정보와 목적</h2>
+      <p>자동가계부는 금융 앱의 거래 알림을 기기에서 분석하여 가계부에 기록하고, 사용자가 직접 입력한 거래·자산·카테고리·반복 및 할부 내역을 관리합니다. 회원가입과 운영자 서버에 금융 자료를 보관하는 기능은 없습니다.</p>
+      <p>사용자가 Android의 <strong>알림 접근 허용</strong>을 켜면 지원 금융 앱의 패키지명, 알림 제목·본문·수신 시각·식별 정보를 읽습니다. 알림에 포함된 거래 날짜·시간·금액·사용처·거래 상대방 이름과 계좌·카드 식별용 번호 일부를 거래 인식, 자산 연결 및 중복 처리에 이용합니다. 알림의 잔액을 현재 보유 잔액으로 자동 적용하지 않습니다.</p>
+      <p>알림 원문 저장을 켜면 수집 대상으로 선택한 지원 앱의 원문을 기기에 보관합니다. 자동 기록하지 못하거나 자산을 연결하지 못한 알림도 원문으로 남을 수 있습니다. 지원 앱의 수집 여부와 연결 자산은 설정에서 변경할 수 있습니다. 직접 입력한 자산 잔액, 거래 내용, 사용자 분류와 화면 설정도 기능 제공에 필요한 범위에서 기기에 저장합니다.</p>
+    </section>
+    <section aria-labelledby="storage">
+      <h2 id="storage">2. 기기 내 보관과 연결 진단</h2>
+      <p>거래·자산·카테고리·알림 원문·인식 규칙은 Android 앱 전용 저장공간에서 처리합니다. 앱은 이 금융 자료를 운영자 서버에 업로드하거나 광고 요청의 내용으로 제공하지 않습니다. 별도의 회원 분석 SDK는 사용하지 않습니다. Android의 앱 자동 백업·기기 이전 백업은 비활성화되어 있습니다.</p>
+      <p>알림 연결 문제 확인을 위해 기기 안에 연결·서비스 생성 및 종료 등의 최근 동작 최대 32개와 본 앱 프로세스의 종료 사유 최대 5개, 관련 시각·오류 종류를 보관합니다. 이 연결 진단에는 알림 본문·거래 금액·계좌번호를 넣지 않습니다. 진단은 자동 전송되지 않으며 백업 DB에도 포함되지 않습니다.</p>
+      <p>앱 잠금을 설정하면 기기 안에 비밀번호 확인을 위한 해시·salt 정보를 보관합니다. 이 정보는 백업 DB에서 제외합니다. 4자리 앱 잠금은 앱 화면의 접근을 제한하는 기능이며, 외부로 내보낸 DB 파일을 암호화하는 기능은 아닙니다.</p>
+    </section>
+    <section aria-labelledby="backup">
+      <h2 id="backup">3. 백업·복구와 사용자가 선택하는 외부 전달</h2>
+      <p>기기 내 수동·자동 백업은 거래·자산·카테고리·인식 규칙·저장 원문·앱 설정을 포함한 DB를 내장 메모리의 다운로드 폴더에 만듭니다. 사용자는 파일 선택기를 통해 DB를 가져오거나 선택한 위치에 다운로드할 수 있습니다. 복구 시 현재 가계부 데이터와 설정을 선택한 백업으로 교체하며, 현재 기기의 앱 잠금 비밀번호는 유지합니다. 운영자 서버와의 클라우드 동기화는 제공하지 않습니다.</p>
+      <p>백업에는 금융 정보와 알림 원문이 포함될 수 있으므로 사용자가 파일의 보관·공유·삭제를 관리해야 합니다. 사용자가 클라우드 저장소나 다른 앱으로 전달한 사본에는 해당 서비스의 정책이 적용됩니다. 앱 삭제나 초기화로 이미 외부에 저장한 백업 파일이 함께 삭제되지는 않습니다.</p>
+      <p>‘복사하기’는 사용자가 선택한 원문이나 진단을 클립보드에 복사합니다. ‘개발자에게 보내기’는 선택한 알림 원문을, 일반 메일 문의는 사용자가 작성한 내용을 메일 앱의 작성창에 넣습니다. <strong>실제 전송은 사용자가 메일 앱에서 실행할 때</strong> 이루어집니다. 메일 주소와 사용자가 보낸 문의·원문은 답변과 문제 해결에 이용하고, 처리 완료 후 지체 없이 삭제하되 법령상 보관 의무가 있는 경우 그 기간을 따릅니다. 불필요한 금융 정보나 다른 사람의 개인정보는 가린 뒤 보내 주세요.</p>
+    </section>
+    <section aria-labelledby="ads">
+      <h2 id="ads">4. 배너 광고와 Google SDK</h2>
+      <p>앱 하단 배너에 <strong>Google AdMob</strong>을, 광고 개인정보 선택 관리에 <strong>Google UMP</strong> SDK를 사용합니다. Google 광고 SDK는 광고 제공·분석·측정·부정 사용 방지를 위해 IP 주소와 그로부터 추정되는 대략적 위치, 앱·광고 상호작용, 성능·오류 등 진단 정보, 광고 ID·앱 세트 ID 및 해당되는 경우 기기 계정 관련 식별 정보를 수집·공유할 수 있습니다. SDK의 전송 정보는 TLS로 암호화됩니다.</p>
+      <p>필요한 지역·상태에서는 UMP가 광고 개인정보 안내와 선택 화면을 제공합니다. 설정에 ‘광고 개인정보 설정’이 표시되면 제공되는 선택을 변경할 수 있습니다. Android의 광고 설정에서 광고 ID를 재설정·삭제할 수 있습니다. 맞춤형 광고를 허용하지 않는다고 모든 광고 SDK 통신이 중단되는 것은 아닙니다. 앱의 거래·잔액·금융 알림 원문은 광고 요청에 넣지 않습니다.</p>
+      <p>Google의 정보 처리·보관·삭제와 국외 서버에서의 처리는 Google 정책을 따릅니다. 자세한 내용은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>, <a href="https://policies.google.com/technologies/partner-sites">Google 파트너 서비스 안내</a>, <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">AdMob 데이터 처리 안내</a>에서 확인할 수 있습니다.</p>
+    </section>
+    <section aria-labelledby="deletion">
+      <h2 id="deletion">5. 보관 기간·삭제와 권한 해제</h2>
+      <p>가계부 데이터와 원문은 사용자가 정리하거나 앱 데이터를 삭제할 때까지 기기에 보관합니다. 거래를 삭제해도 보관 중인 알림 원문은 남을 수 있습니다. 설정의 ‘초기화’는 가계부 데이터·알림 원문·앱 설정과 잠금을 초기화합니다. Android 설정에서 앱 데이터를 삭제하거나 앱을 제거해 앱 전용 자료를 지울 수도 있습니다. 내장 메모리 등에 내보낸 백업은 별도로 삭제해야 합니다.</p>
+      <p>알림 접근 허용을 해제하거나 알림 원문 저장을 끄면 새 알림의 수집·자동 기록이 중단되며 기존 데이터는 자동 삭제되지 않습니다. 앱은 SMS 읽기, 연락처, 카메라 또는 기기의 정확한 위치 권한을 요청하지 않습니다. 파일은 시스템 파일 선택기와 앱이 만든 다운로드 파일을 통해 접근합니다.</p>
+      <p>기기에서 직접 열람·수정·삭제할 수 있는 자료는 앱의 각 관리 화면을 이용해 주세요. 운영자는 기기에만 보관된 자료를 원격으로 열람하거나 복구할 수 없습니다. Google이 처리하는 광고 관련 정보의 관리 방법은 위 정책과 Android 설정에서 확인할 수 있습니다.</p>
+    </section>
+    <section aria-labelledby="contact">
+      <h2 id="contact">6. 문의와 변경</h2>
+      <p>운영자 및 개인정보 문의 담당: <strong>AppDaMan</strong><br>문의: <a href="mailto:appdaman1234@gmail.com">appdaman1234@gmail.com</a></p>
+      <p>개인정보의 열람·정정·삭제 등 문의는 위 이메일로 접수할 수 있습니다. 처리 방식이 변경되면 이 페이지에 시행일과 내용을 반영하고 필요한 경우 앱에서도 안내합니다.</p>
+    </section>
+  </article>
+  <footer>
+    이 페이지에는 광고·방문자 분석 스크립트와 입력 양식이 없습니다. 페이지 접속에 따른 호스팅 제공자의 기술적 처리는 <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub 개인정보처리방침</a>을 따르며 앱의 금융 알림 처리와 별개입니다.
+    <nav aria-label="다른 앱 개인정보처리방침"><a href="/">기프트 알리미</a><a href="/notitamer/">NotiTamer</a></nav>
+  </footer>
+</main>
+</body>
+</html>
